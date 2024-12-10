@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-md custom-navbar border-bottom sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <i class="fa-regular fa-snowflake"></i>ice
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-left">
+          <a class="nav-link" href="/listings">All Listings</a>
+          <a class="nav-link btn-primary" href="/listings/new">Add New Listings</a>
+        </div>
+        <div id="search-container" class="search-bar ms-auto">
+            <input type="text" class="search-field" placeholder="Search listings...">
+            <div class="search-icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div class="navbar-nav ms-auto">
+          <% if (!currUser) {%>
+          <a class="nav-link" href="/signup">Signup</a>
+          <a class="nav-link" href="/login">Login</a>
+          <% }%>
+          <% if (currUser) {%>
+          <a class="nav-link btn-primary" href="/logout">Logout</a>
+          <% }%>
+        </div>
+      </div>
+    </div>
+  </nav>
+  

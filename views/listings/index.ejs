@@ -1,0 +1,74 @@
+<% layout('/layouts/boilerplate') %>
+<body>
+    <!-- <h1>ALL LISTINGS</h1> -->
+    <!-- <form method="get" action="/listings/new">
+        <button>Create New Listings</button>
+    </form> -->
+    <div id="filters">
+      <div class="filters">
+        <div>
+          <i class="fa-solid fa-fire"></i>
+          <p>Trending</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-bed"></i>
+          <p>Rooms</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-tree"></i>
+          <p>Camping</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-umbrella-beach"></i>
+          <p>Beachfront</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-mountain"></i>
+          <p>Amazing Views</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-snowflake"></i>
+          <p>Arctic</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-wind"></i>
+          <p>Windmills</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-dog"></i>
+          <p>Pet-Friendly</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-spa"></i>
+          <p>Wellness</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-city"></i>
+          <p>Cityscapes</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-anchor"></i>
+          <p>Boats</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-house"></i>
+          <p>Cabins</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+    <% for(let listing of alllistings) { %>
+      <a href="/listings/<%= listing._id %>" class="listing-link">
+    <div class="card col listing-card ">
+        <img src="<%= listing.image?.url %>" class="card-img-top" alt="Listing Image" style="height:20rem;"/>
+      <div class="card-img-overlay"></div>
+        <div class="card-body">
+         <b> <p class="card-text"><%= listing.title %></b>
+            <br>&#8377;<%= listing.price.toLocaleString("en-IN") %> / night</p>
+        </div>
+      </div>
+      <%} %>
+    </div>
+  </a>
+</body>
