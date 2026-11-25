@@ -1,0 +1,563 @@
+ body{
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container{
+  flex: 1;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* Custom Navbar Styling */
+  .custom-navbar {
+    background-color: #ffffff; /* Clean white background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 0.8rem 1rem;
+  }
+  
+  .custom-navbar .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff385c; /* Airbnb pink */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .custom-navbar .navbar-brand i {
+    margin-right: 0.5rem;
+    color: #ff385c;
+  }
+  
+  /* Navbar Links */
+  .custom-navbar .nav-link {
+    font-size: 1rem;
+    color: #333; /* Dark gray for text */
+    font-weight: bold;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .custom-navbar .nav-link:hover {
+    background-color: #ff385c; /* Airbnb hover pink */
+    color: #ffffff; /* White text on hover */
+  }
+  
+  /* Highlighted Button */
+  .custom-navbar .nav-link.btn-primary {
+    background-color: #ff385c;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .custom-navbar .nav-link.btn-primary:hover {
+    background-color: #e01e5a; /* Slightly darker pink for hover */
+    box-shadow: 0 4px 6px rgba(255, 56, 92, 0.2);
+  }
+  
+  /* Toggler Button */
+  .custom-navbar .navbar-toggler {
+    border: none;
+  }
+  
+  .custom-navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .custom-navbar .nav-link {
+      font-size: 0.9rem;
+      padding: 10px 8px;
+    }
+  
+    .custom-navbar .nav-link.btn-primary {
+      margin-top: 0.5rem;
+    }
+  }
+
+  
+  /* Footer Styles */
+.footer {
+    background-color: #f7f7f7; /* Light gray background */
+    color: #333; /* Dark text for readability */
+    padding: 2rem 1rem; /* Spacing for comfort */
+    border-top: 1px solid #ddd; /* Subtle border at the top */
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  /* Footer Container */
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Social Media Icons */
+  .footer-socials {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-socials a {
+    color: #ff385c; /* Airbnb-inspired pink for icons */
+    font-size: 1.8rem; /* Icon size */
+    margin: 0 0.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .footer-socials a:hover {
+    color: #e01e5a; /* Darker pink on hover */
+    transform: scale(1.2); /* Slight enlargement on hover */
+  }
+  
+  /* Footer Links */
+  .footer-links {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-links a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Default text color */
+    margin: 0 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #ff385c; /* Pink hover effect */
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
+  /* Copyright Section */
+  .footer-copyright {
+    font-size: 0.85rem;
+    color: #777; /* Subtle text color */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-socials a {
+      font-size: 1.5rem; /* Smaller icons on mobile */
+    }
+  
+    .footer-links {
+      margin-bottom: 0.5rem;
+    }
+  
+    .footer-links a {
+      display: block; /* Stack links on mobile */
+      margin: 0.5rem 0;
+    }
+  }
+  /* cards */
+  .listing-card {
+    border: none !important;
+    margin-bottom: 2rem;
+  }
+
+  .card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .card-body{
+    padding: 0 !important;
+  }
+  
+  .card-text p {
+     font-weight: 400 !important;
+  }
+
+  .listing-link{
+    text-decoration: none;
+  }
+
+  /* card decoration */
+
+  .card-img-overlay{
+    opacity: 0;
+  }
+  
+  .card-img-overlay:hover{
+    opacity: 0.3;
+    background-color: white;
+  }
+
+  .add-btn{
+    background-color: #ff385c !important;
+    border: none !important;
+  }
+
+  .edit-btn{
+    background-color: #ff385c !important;
+    border: none !important;
+  }
+ 
+  /* show page */
+  .show-img{
+      height: 50vh;
+  }
+
+  .btns{
+    display: flex;
+  }
+
+.show-card{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Overall Body */
+body {
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for centering login form */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Login Card Style */
+.login-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Heading for the login page */
+.login-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 10px 0;
+  text-transform: uppercase; /* Optional: for a clean, bold look */
+  border-bottom: 2px solid #ff385c; /* Optional: adds a cool underline effect */
+}
+
+/* Form group for inputs */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Form labels */
+label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Form inputs */
+.form-control {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #f7f7f7;
+  color: #333;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #ff385c;
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Button for login */
+.btn-login {
+  background-color: #ff385c;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #ff385c;
+}
+
+/* Feedback for the form */
+.valid-feedback {
+  color: green;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  display: none;
+}
+
+.form-control:valid + .valid-feedback {
+  display: block;
+}
+
+
+/* Overall Body */
+body {
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for centering signup form */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Signup Card Style */
+.signup-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Heading for the signup page */
+.signup-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 10px 0;
+  text-transform: uppercase; /* Optional: for a clean, bold look */
+  border-bottom: 2px solid #ff385c; /* Optional: adds a cool underline effect */
+}
+
+/* Form group for inputs */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Form labels */
+label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Form inputs */
+.form-control {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #f7f7f7;
+  color: #333;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #ff385c;
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Button for signup */
+.btn-signup {
+  background-color: #ff385c;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-signup:hover {
+  background-color: #ff385c;
+}
+
+/* Feedback for the form */
+.valid-feedback {
+  color: green;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  display: none;
+}
+
+.form-control:valid + .valid-feedback {
+  display: block;
+}
+
+
+.signup-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.signup-link-text {
+  color: #ff385c; /* Match this to your primary theme color */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.signup-link-text:hover {
+  text-decoration: underline;
+  color: #ff385c; /* Darker color for hover effect */
+}
+
+
+.login-link {
+  text-align:center;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.login-link-text {
+  color: #ff385c; /* Match this to your primary theme color */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-link-text:hover {
+  text-decoration: underline;
+  color: #ff385c; /* Darker color for hover effect */
+}
+
+/* General reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+#filters {
+  background-color: #f8f9fa; /* Light grey background */
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.filters {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.filters div {
+  text-align: center;
+  cursor: pointer;
+  padding: 10px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.filters div:hover {
+  transform: translateY(-5px); /* Hover effect */
+  background-color: #e9ecef; /* Slightly darker grey */
+  border-radius: 8px;
+}
+
+.filters i {
+  font-size: 24px;
+  color: #ff385c; 
+}
+
+.filters p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #333; /* Dark text */
+}
+
+/* Search Bar Container */
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 40px;
+  padding: 5px 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Search Input Field */
+.search-field {
+  flex: 1;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  outline: none;
+  background: none;
+  color: #333;
+}
+
+.search-field::placeholder {
+  color: #aaa;
+}
+
+/* Search Icon */
+.search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #ff385c;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.search-icon i {
+  font-size: 16px;
+}
+
+.search-icon:hover {
+  background-color: #e31645;
+}
